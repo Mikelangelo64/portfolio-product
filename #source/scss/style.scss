@@ -948,9 +948,36 @@ body{
         &:nth-child(odd){
             width: 100%;
         }
-        
+
         
     }
+    
+    @media(min-width:1030px) {
+        .professionals-list__left{
+            .professionals-list__item{
+                &:nth-child(1){
+                    .professionals-list__avatar {
+                        .professionals-list__img{
+                            transform: translate(0, 10%);
+                        }
+                    }
+                }
+            }
+        }
+        .professionals-list__right{
+            .professionals-list__item{
+                &:nth-child(2){
+                    .professionals-list__avatar {
+                        .professionals-list__img{
+                            transform: translate(0, 10%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+
 }
 
 //STRATEGIES-----------------------------------------------------

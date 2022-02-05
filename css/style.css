@@ -1119,6 +1119,16 @@ body._lock {
 .professionals-list .professionals-list__item:nth-child(odd) {
   width: 100%;
 }
+@media (min-width: 1030px) {
+  .professionals-list .professionals-list__left .professionals-list__item:nth-child(1) .professionals-list__avatar .professionals-list__img {
+    -webkit-transform: translate(0, 10%);
+            transform: translate(0, 10%);
+  }
+  .professionals-list .professionals-list__right .professionals-list__item:nth-child(2) .professionals-list__avatar .professionals-list__img {
+    -webkit-transform: translate(0, 10%);
+            transform: translate(0, 10%);
+  }
+}
 
 .strategies {
   margin-top: 150px;
