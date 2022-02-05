@@ -640,7 +640,10 @@ body{
     }
 }
 .same-content__text__wrapper {
-
+    @media(max-width:430px){
+        width: 100%;
+        align-items: center;
+    }
     .same-content__pretitle {
         margin-bottom: 8px;
     }
