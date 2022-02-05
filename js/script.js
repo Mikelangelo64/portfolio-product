@@ -88,8 +88,37 @@ $(document).ready(function(){
         
     })
 
+    
+
     //DARK-THEME
+    let link = document.getElementById("theme-link")
+    let btn = document.getElementsByClassName("theme")
+
     $('.theme').click(function(event){
-        $('.theme').toggleClass('_dark-switch')
+        $('.theme, .main-content__video').toggleClass('_dark-switch')
+        changeTheme()
     })
+
+
+
+    function changeTheme(){
+        const lightTheme = 'css/light-theme.css'
+        const darkTheme = 'css/dark-theme.css'
+
+        let currTheme = link.getAttribute("href")
+        let theme
+
+        if(currTheme == lightTheme){
+            currTheme = darkTheme
+            theme = 'dark'
+        }
+        else{
+            currTheme = lightTheme
+            theme = 'light'
+        }
+
+        link.setAttribute("href", currTheme)
+
+        //Save(theme)
+    }
 })

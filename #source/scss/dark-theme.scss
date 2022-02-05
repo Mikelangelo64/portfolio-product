@@ -1,0 +1,394 @@
+//background DONE
+//color
+//border
+//box-shadow???
+
+
+//colors~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$black-text: #ddcbc2;
+$black-dop: #d0d7e1;
+$green: #02897A; 
+/* #035B81 */
+//body main bg color:
+$main-bg: #344f5c;
+
+//navigation:
+//btn
+$blue-btn: #173A56;
+$blue-btn-invert: #e8c5a9;
+$grey-btn: #BCD0E5;
+$grey-btn-invert:#432f1a;
+
+/* *{
+    transition: all 0.3s ease;
+} */
+
+body{
+    background: $main-bg;
+    color: $black-text;
+    transition: all 0.3s ease;
+}
+
+.btn{
+    color: $blue-btn-invert;
+    background-color: $green;
+}
+.title {
+    color: $black-text;
+}
+.logo{
+    background: $black-text;
+    padding: 15px 15px;
+    border-radius: 48%;
+}
+//HEADER----------------------------------------------------
+.header {
+    background: rgba(52, 79, 92, 0.6);
+    transition: all 0.1s ease; 
+    
+}
+
+.burger {
+    
+    @media(max-width: 770px){ 
+        &::after, &::before{
+            background: $blue-btn-invert;
+        }
+        span{
+            background: $blue-btn-invert;
+        }
+        &._active-menu{
+            &::after, &::before{
+                background: $grey-btn;
+            }
+        }
+    }
+}
+
+.header__btn{
+    &.header__sign__in__btn{
+        border: 1px solid #fff;
+        background-color: $blue-btn-invert;
+        color: $grey-btn-invert;
+    }
+}
+
+@media(max-width: 770px){
+    
+    .header-content__main {
+        background: rgba(55, 78, 90, 0.8);
+        .menu {
+            .menu-list {
+                color: $grey-btn;
+            }
+        }
+        .header__btn {
+            &.header__sign__up__btn{
+                background: $green;
+                color: $blue-btn-invert;
+                border: 1px solid $blue-btn-invert;
+            }
+            
+        }
+        .header__sign__in__btn {
+            color: $grey-btn;
+            background: $green;
+            border: 1px solid $grey-btn;
+        }
+    }
+    
+}
+//MAIN------------------------------------------------------------
+.main-content__text {
+    
+    color: $black-text;
+}
+.main-content__video {
+    color: $blue-btn-invert;
+    &::before{
+        border-left: 18px solid $blue-btn-invert;
+    }
+    @media(max-width: 1030px){
+        &::before{
+            border-left: 12px solid $blue-btn-invert;
+        }
+    }
+}
+
+//FOR-YOU---------------------------------------------------------
+.bg-gradient, .bg-gradient__up {
+    background: linear-gradient(179.59deg, #253841 0.35% , $main-bg  99.63%);
+}
+.for-you-benefits-text {
+    color: $black-text;
+}
+.for-you-benefits__picture{
+    .for-you-benefits__img{
+        path{
+            fill: $black-text;
+        }
+    }
+}
+//THREE SAMES SECTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    color: $black-text;
+}
+//2.CUSTOMER-SUPPORT---------------------------------------------------------
+.customer-support-content-list__check{
+    path{
+        fill: $black-text;
+    }
+}
+//PROFESSIONALS-------------------------------------------------
+.professionals-content__text__wrapper {
+    color: $black-text;
+}
+.professionals-list {
+
+    .professionals-list__item {
+        
+        .professionals-list__comment__wrapper {
+            
+            .professionals-list__comment__text {
+                color: $grey-btn-invert;
+
+                box-shadow: 0px 2px 15px rgba(197, 180, 113, 0.39);
+                
+                background: $blue-btn-invert;
+
+                &::before{
+                    background: $blue-btn-invert;
+                }
+
+            }
+            
+        }
+    }
+}
+
+//STRATEGIES-----------------------------------------------------------------
+.strategies-content__text__wrapper {
+    .strategies-content__text__block {
+        color: $black-text;
+    }
+}
+//SLiDER
+.slider__item {
+    border: 1px solid $blue-btn-invert;
+    
+    &:nth-child(odd){
+        background:  $green;
+        .slider__title {
+            color: $grey-btn-invert;
+        }
+    }
+}
+.slider__text__wrapper {
+    color: $black-text;
+}
+.slider__date {
+    position: relative;
+    &::before{
+        background: $black-text;
+    }
+}
+/* Активная точка */
+.slick-dots li.slick-active{
+    button{
+        background: $green;
+    }
+    
+}
+/* Элемент точки */
+.slick-dots li button{
+    background: $blue-btn-invert;
+}
+//TWO SECTIONS WITH THE SAME TRIPLE FLEX-COLUMN CONTENT~~~~~~~~~~~~~~~
+.triple-section__text__wrapper {
+    .triple-section__text__block {
+        color: $black-text;
+    }
+    
+}
+
+//1.PRICE-------------------------------------------------------------------
+.prise-list {
+    .price-list__item {
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+        background: $main-bg;
+        border: 1px solid $green;
+        .prise-list__head__wrapper {
+            color: $black-text;
+        }
+        
+        .prise-list__main__wrapper {
+            .prise-list__count {
+                color: $green;
+            }
+            .prise-list__info {
+                .prise-list__currensy {
+                    color: $green;
+                }
+                .prise-list__time {
+                    color: #AFAFAF;
+                }
+            }
+        
+        }
+        
+        .prise-list__bottom {
+            .prise-list__conditions {
+                color: $black-text;
+            }
+            
+            .prise-list__btn{
+                color: $blue-btn-invert;
+            }
+        }
+
+        &:hover{
+            background: $green;
+            color: $black-dop;
+            .prise-list__head__wrapper {
+                color: inherit;
+            }
+            .prise-list__main__wrapper {
+
+                .prise-list__count {
+                    color: inherit;
+                }
+                .prise-list__info {
+                    .prise-list__currensy {
+                        color: inherit;
+                    }
+                    .prise-list__time {
+                        color: $black-dop;
+                    }
+                }
+            }
+            .prise-list__bottom{
+                .prise-list__conditions{
+                    color: inherit;
+                }
+                .prise-list__btn{
+                    background: $black-dop;
+                    color: $green;
+                }
+            }
+        }
+        
+    }
+
+    &::before{
+        background: rgba(188, 208, 229, 0.496913);
+    }
+
+    @media(max-width: 1030px){
+        &::after, .prise-list__line{
+            background: rgba(188, 208, 229, 0.496913);
+        }
+
+    }
+}
+
+//2.FEEDBACK----------------------------------------------------------
+.feedback-list__item {
+    border: 1px solid $green;
+}
+
+.feedback-list__comments {
+    color: $black-dop;
+}
+.feedback-list-author {
+    .author__info {
+        .author__name {
+            color: #02BC6B;
+        }
+        .author__profession {
+            color: $grey-btn;
+        }
+    }
+}
+//JOIN--------------------------------------------------------------
+.join__wrapper {
+    background: $green;
+}
+.join__btn {
+    background: $black-text;
+    color: $green;
+}
+.join-content {
+    color:  $black-text;
+}
+
+//BOTTOM--------------------------------------------------------------------------------------
+.bottom-content {
+    color: $black-text;
+}
+.bottom-social-links {
+    .logo{
+        padding-bottom: 15px;
+        margin-bottom: 10px;
+    }
+
+    li{
+        background: $black-text;
+        
+    }
+}
+
+.bottom-content__fast__links__rows{
+    @media(max-width:430px){
+        border-top: 1px solid $blue-btn-invert;
+    }
+}
+
+.bottom-content__recources__and__stuff{
+    @media(max-width:770px){
+        border-bottom: 1px solid $blue-btn-invert;
+    }
+    @media(max-width:430px){
+        border-bottom: transparent;
+        &._bottom-active__stuff, &._bottom-active__resources{
+            border-bottom: 1px solid $blue-btn-invert;
+        }
+    }
+}
+
+.bottom-content__resources {
+    .bottom-content__resources__title {
+        @media(max-width:430px){
+            &::before, &::after{
+                background-color: $green;
+            }
+        }
+    }
+}
+
+.bottom-content__stuff {
+    .bottom-content__stuff__title {
+        
+        @media(max-width:430px){
+            &::before, &::after{
+                background-color: $green;
+                
+            }
+        }
+    }
+}
+
+.bottom-content__get__in__touch {
+    @media(max-width:770px){
+        border-bottom: 1px solid $blue-btn-invert;
+    }
+}
+
+.form-get-in-touch__email{
+    background: $blue-btn-invert;
+    color: $grey-btn-invert;
+    &::placeholder{
+        color: $main-bg
+    }
+}

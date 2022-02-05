@@ -1,0 +1,362 @@
+//background DONE
+//color
+//border
+//box-shadow???
+
+
+//colors~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$black-text: #22343D;
+$black-dop: #2F281E;
+$green: #02897A; 
+
+//body main bg color:
+$main-bg: #fff;
+
+//navigation:
+//btn
+$blue-btn: #173A56;
+$grey-btn: #BCD0E5;
+
+/* *{
+    transition: all 0.3s ease;
+} */
+
+body{
+    background: $main-bg;
+    color: $black-text;
+    transition: all 0.3s ease;
+}
+
+.btn{
+    color: #fff;
+    background-color: $green;
+}
+.title {
+    color: $black-text;
+}
+
+//HEADER----------------------------------------------------
+.header {
+    background: rgba(255, 255, 255, 0.6);
+    transition: all 0.1s ease;
+}
+
+.burger {
+    
+    @media(max-width: 770px){ 
+        &::after, &::before{
+            background: #035B81;
+        }
+        span{
+            background: #035B81;
+        }
+        &._active-menu{
+            &::after, &::before{
+                background: #fff;
+            }
+        }
+    }
+}
+
+.header__btn{
+    &.header__sign__in__btn{
+        border: 1px solid $grey-btn;
+        background-color: #fff;
+        color: $blue-btn;
+    }
+}
+
+@media(max-width: 770px){
+    .header-content__main {
+        background: rgba(3, 91, 129, 0.8);
+        .menu {
+            .menu-list {
+                color: #f3f3f3;
+            }
+        }
+        .header__btn {
+            &.header__sign__up__btn{
+                background: #fafafa;
+                color: $green;
+                border: 1px solid $green;
+            }
+            
+        }
+        .header__sign__in__btn {
+            background: #fafafa;
+        }
+    }
+    
+}
+//MAIN------------------------------------------------------------
+.main-content__text {
+    
+    color: $black-text;
+}
+.main-content__video {
+    color: $green;
+    &::before{
+        border-left: 18px solid $green;
+    }
+    @media(max-width: 1030px){
+        &::before{
+            border-left: 12px solid $green;
+        }
+    }
+}
+
+//FOR-YOU---------------------------------------------------------
+.for-you-benefits-text {
+    color: $black-text;
+}
+
+//THREE SAMES SECTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    color: $black-text;
+}
+//1.PROFESSIONALS-------------------------------------------------
+.professionals-content__text__wrapper {
+    color: $black-text;
+}
+.professionals-list {
+
+    .professionals-list__item {
+        
+        .professionals-list__comment__wrapper {
+            
+            .professionals-list__comment__text {
+                color: $black-dop;
+
+                box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
+                
+                background: #fff;
+
+                &::before{
+                    background: #fff;
+                }
+
+            }
+            
+        }
+    }
+}
+
+//STRATEGIES-----------------------------------------------------------------
+.strategies-content__text__wrapper {
+    .strategies-content__text__block {
+        color: $black-text;
+    }
+}
+//SLiDER
+.slider__item {
+    border: 1px solid #DEDEDE;
+    
+    &:nth-child(odd){
+        .slider__title {
+            color: $green;
+        }
+    }
+}
+.slider__text__wrapper {
+    color: $black-text;
+}
+.slider__date {
+    position: relative;
+    &::before{
+        background: $black-text;
+    }
+}
+/* Активная точка */
+.slick-dots li.slick-active{
+    button{
+        background: $green;
+    }
+    
+}
+/* Элемент точки */
+.slick-dots li button{
+    background: #efefef;
+}
+//TWO SECTIONS WITH THE SAME TRIPLE FLEX-COLUMN CONTENT~~~~~~~~~~~~~~~
+.triple-section__text__wrapper {
+    .triple-section__text__block {
+        color: $black-text;
+    }
+    
+}
+
+//1.PRICE-------------------------------------------------------------------
+.prise-list {
+    .price-list__item {
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+        background: #fff;
+
+        .prise-list__head__wrapper {
+            color: $black-text;
+        }
+        
+        .prise-list__main__wrapper {
+            .prise-list__count {
+                color: $green;
+            }
+            .prise-list__info {
+                .prise-list__currensy {
+                    color: $green;
+                }
+                .prise-list__time {
+                    color: #AFAFAF;
+                }
+            }
+        
+        }
+        
+        .prise-list__bottom {
+            .prise-list__conditions {
+                color: $black-text;
+            }
+            
+            .prise-list__btn{
+                color: #FFFFFF;
+            }
+        }
+
+        &:hover{
+            background: $green;
+            color: #fff;
+            .prise-list__head__wrapper {
+                color: inherit;
+            }
+            .prise-list__main__wrapper {
+
+                .prise-list__count {
+                    color: inherit;
+                }
+                .prise-list__info {
+                    .prise-list__currensy {
+                        color: inherit;
+                    }
+                    .prise-list__time {
+                        color: #E0E0E0;
+                    }
+                }
+            }
+            .prise-list__bottom{
+                .prise-list__conditions{
+                    color: inherit;
+                }
+                .prise-list__btn{
+                    background: #fff;
+                    color: $green;
+                }
+            }
+        }
+        
+    }
+
+    &::before{
+        background: rgba(188, 208, 229, 0.496913);
+    }
+
+    @media(max-width: 1030px){
+        &::after, .prise-list__line{
+            background: rgba(188, 208, 229, 0.496913);
+        }
+
+    }
+}
+
+//2.FEEDBACK----------------------------------------------------------
+.feedback-list__item {
+    border: 1px solid #DEDEDE;
+}
+
+.feedback-list__comments {
+    color: #737373;
+}
+.feedback-list-author {
+    .author__info {
+        .author__name {
+            color: $green;
+        }
+        .author__profession {
+            color: #252B42;
+        }
+    }
+}
+//JOIN--------------------------------------------------------------
+.join__wrapper {
+    background: $green;
+}
+.join__btn {
+    background: #FFFFFF;
+    color: $green;
+}
+.join-content {
+    color: #FFFFFF;
+}
+
+//BOTTOM--------------------------------------------------------------------------------------
+.bottom-content {
+    color: $black-text;
+}
+.bottom-social-links {
+    li{
+        background: #EDFFFC;
+        
+    }
+}
+
+.bottom-content__fast__links__rows{
+    @media(max-width:430px){
+        border-top: 1px solid #ededed;
+    }
+}
+
+.bottom-content__recources__and__stuff{
+    @media(max-width:770px){
+        border-bottom: 1px solid #ededed;
+    }
+    @media(max-width:430px){
+        border-bottom: transparent;
+        &._bottom-active__stuff, &._bottom-active__resources{
+            border-bottom: 1px solid #ededed;
+        }
+    }
+}
+
+.bottom-content__resources {
+    .bottom-content__resources__title {
+        @media(max-width:430px){
+            &::before, &::after{
+                background-color: $green;
+            }
+        }
+    }
+}
+
+.bottom-content__stuff {
+    .bottom-content__stuff__title {
+        
+        @media(max-width:430px){
+            &::before, &::after{
+                background-color: $green;
+                
+            }
+        }
+    }
+}
+
+.bottom-content__get__in__touch {
+    @media(max-width:770px){
+        border-bottom: 1px solid #ededed;
+    }
+}
+
+.form-get-in-touch__email{
+    background: #ffffff;
+    &::placeholder{
+        color: #BCD0E5
+    }
+}
